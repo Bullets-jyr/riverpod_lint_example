@@ -6,11 +6,13 @@ part 'avoid_public_notifier_properties.g.dart';
 
 @riverpod
 class CounterWithPublicProperty extends _$CounterWithPublicProperty {
-  final int internalVar = 10;
+  // final int internalVar = 10;
+  final int _internalVar = 10;
 
   @override
   int build() {
-    return internalVar;
+    // return internalVar;
+    return _internalVar;
   }
 
   void increment() => state++;
